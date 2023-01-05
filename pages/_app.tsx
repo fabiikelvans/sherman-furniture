@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <>
           <Provider store={store}>
               <Toaster />
-              <div className='text-white wrapper'>
+              <div className='text-white wrapper noise'>
                   <AnimatedCursor
                       innerSize={8}
                       outerSize={8}

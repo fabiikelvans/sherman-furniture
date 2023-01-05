@@ -282,3 +282,17 @@
         transform: scale(3);
     }
 }
+
+
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    content: "";
+    opacity: .03;
+    z-index: 1500;
+    pointer-events: none;
+    background: url('../public/images/noise.gif');
+}
