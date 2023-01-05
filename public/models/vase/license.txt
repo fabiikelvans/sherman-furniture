@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vase
+* source:	https://sketchfab.com/3d-models/vase-52276b605e944b3ab8a6070863fed191
+* author:	dmitriy7776661111 (https://sketchfab.com/dmitriy7776661111)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vase" (https://sketchfab.com/3d-models/vase-52276b605e944b3ab8a6070863fed191) by dmitriy7776661111 (https://sketchfab.com/dmitriy7776661111) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

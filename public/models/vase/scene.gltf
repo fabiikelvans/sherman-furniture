@@ -1,0 +1,388 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 32941,
+      "max": [
+        0.7614193558692932,
+        3.215313673019409,
+        0.7673349976539612
+      ],
+      "min": [
+        -0.7701610922813416,
+        0.020196259021759033,
+        -0.9393773078918457
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 395292,
+      "componentType": 5126,
+      "count": 32941,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 32941,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 184716,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 790584,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.7340291142463684,
+        3.4717519283294678,
+        1.1335034370422363
+      ],
+      "min": [
+        -0.7314708828926086,
+        -3.5822391510009766e-05,
+        -0.7270409464836121
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1576968,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9999999403953552,
+        0.9997493624687195,
+        1.0
+      ],
+      "min": [
+        -0.9999998211860657,
+        -0.9999902844429016,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 263528,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 738864,
+      "componentType": 5125,
+      "count": 131562,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2363352,
+      "componentType": 5126,
+      "count": 16468,
+      "max": [
+        0.6834542155265808,
+        3.2559139728546143,
+        0.6830596923828125
+      ],
+      "min": [
+        -0.6363708972930908,
+        1.722574234008789e-05,
+        -0.9650091528892517
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 2560968,
+      "componentType": 5126,
+      "count": 16468,
+      "max": [
+        0.9999998807907104,
+        0.9975939989089966,
+        0.9997847080230713
+      ],
+      "min": [
+        -1.0,
+        -0.9967418909072876,
+        -0.9997650980949402
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 787784,
+      "componentType": 5126,
+      "count": 16468,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1265112,
+      "componentType": 5125,
+      "count": 26760,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "dmitriy7776661111 (https://sketchfab.com/dmitriy7776661111)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/vase-52276b605e944b3ab8a6070863fed191",
+      "title": "Vase"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1372152,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 919528,
+      "byteOffset": 1372152,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2758584,
+      "byteOffset": 2291680,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5050264,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "White",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6823474332548991,
+          0.6823474332548991,
+          0.6823474332548991,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.043702764654737325
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Gold",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.979986380953846,
+          0.7324034805068477,
+          0.08128872771541082,
+          1.0
+        ],
+        "roughnessFactor": 0.1841152436021378
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Vase_White_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Vase_Gold_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Vase_Gold_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -5.053215392444312e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        -5.053215392444312e-16,
+        0.0,
+        0.0001895867462735623,
+        -1654.5145263671875,
+        -4.165190219879518,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Vase.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6
+      ],
+      "matrix": [
+        -2.083148679182193e-05,
+        476.5688476562495,
+        -5.290977074870473e-14,
+        0.0,
+        0.00013445435418827452,
+        5.978804094603635e-12,
+        476.56884765623096,
+        0.0,
+        476.5688476562305,
+        2.0831486871186587e-05,
+        -0.00013445435418827452,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Vase"
+    },
+    {
+      "mesh": 0,
+      "name": "Vase_White_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Vase_Gold_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Vase_Gold_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
