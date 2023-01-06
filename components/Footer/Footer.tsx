@@ -9,14 +9,14 @@ function Footer() {
 
     return (
         <div className='spacing flex justify-between gap-x-6 gap-y-8 flex-col md:flex-row'>
-            <div className='text-center'>
+            <div className='md:text-center text-left'>
                 <Link href={''} onClick={() => router.push('/')}>
                 <div  className='h-24 w-32 relative cursor-pointer'>
                     <Image priority src="/logo/logo-white.png" alt='logo' fill
                             />
                 </div>
                 </Link>
-                <p className='font-extralight text-[15px] mt-4 w-[60%]'>Creating Modern Looking Homes!</p>
+                <p className='font-extralight italic text-sm md:text-[15px] mt-4 w-[60%]'>Creating Modern Looking Homes!</p>
             </div>
 
             <div>

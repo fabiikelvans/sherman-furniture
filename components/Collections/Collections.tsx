@@ -51,7 +51,7 @@ function Collections() {
                 </Suspense>
                 <div className='absolute top-[40%] left-[10%] md:left-[35%] text-center'>
                     <h4 className='text-md'><a href="#">Collection</a></h4>
-                    <h1 className='mt-2 text-6xl font-bold' style={titan.style}>Lounge table</h1>
+                    <h1 className='mt-2 text-6xl font-bold' style={titan.style}>Cantilever Chair</h1>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ function Collections() {
                 </Suspense>
                 <div className='absolute top-[40%] left-[10%] md:left-[35%] text-center'>
                     <h4 className='text-md'><a href="#">Collection</a></h4>
-                    <h1 className='mt-2 text-6xl font-bold' style={titan.style}>Lounge table</h1>
+                    <h1 className='mt-2 text-6xl font-bold px-[10%] md:px-0' style={titan.style}>Sofa Chair</h1>
                 </div>
             </div>
 

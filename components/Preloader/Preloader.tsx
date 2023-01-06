@@ -70,36 +70,42 @@ function Preloader() {
                 bg-[url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
                     <div className="block
                 absolute w-full h-full
                 bg-[url('https://images.unsplash.com/photo-1617103996702-96ff29b1c467?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
                     <div className="block
                 absolute w-full h-full
                 bg-[url('https://images.unsplash.com/photo-1618221639244-c1a8502c0eb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
                     <div className="block
                 absolute w-full h-full
                 bg-[url('https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
                     <div className="block
                 absolute w-full h-full
                 bg-[url('https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
                     <div className="block
                 absolute w-full h-full
                 bg-[url('https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')]
                 bg-cover
                 bg-center
+                rounded-2xl
                 "></div>
 
                 </div>

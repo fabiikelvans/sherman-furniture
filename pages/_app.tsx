@@ -17,6 +17,13 @@ import dynamic from 'next/dynamic'
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
 });
+
+
+import Router from 'next/router';
+import NProgress from 'nprogress'; //nprogress module
+import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
+Router.events.on('routeChangeStart', () => NProgress.start()); Router.events.on('routeChangeComplete', () => NProgress.done()); Router.events.on('routeChangeError', () => NProgress.done());
+
 export default function App({ Component, pageProps }: AppProps) {
 
     useEffect(() => {

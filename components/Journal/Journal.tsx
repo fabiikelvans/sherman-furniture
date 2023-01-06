@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import {titan} from "../../pages";
+import Link from "next/link";
 
 function Journal() {
     return (
@@ -9,7 +10,7 @@ function Journal() {
                 <div className='w-[100%] md:w-[50%] text-center'>
                     <h1 className='text-6xl font-bold' style={titan.style}>Journal</h1>
                     <p className='mt-10 px-12 text-sm font-semibold'>The Journal is a space where we post our thoughts on trends, collaborations with other designers, stuff we love at the moment, and news. Not to mention Red events that can't be missed!</p>
-                    <button className='mt-12 underline tracking-wide'>Discover</button>
+                    <Link href='/about' className='mt-12 underline tracking-wide'>Discover</Link>
                 </div>
 
                 <div className='relative w-[100%] md:w-[50%]'>

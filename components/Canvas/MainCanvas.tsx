@@ -5,8 +5,8 @@ import Furniture from "../Furniture/Furniture";
 function MainCanvas() {
     return (
         <>
-            <div className='h-[100vh] pt-52 md:pt-0'>
-            <div className='h-[100vh] pt-12'>
+            <div className='h-full pt-52 md:pt-8'>
+            <div className='h-[100vh] w-[40vw]'>
             <Suspense fallback={null}>
                 <Canvas shadows dpr={1.5}>
                     <Furniture/>

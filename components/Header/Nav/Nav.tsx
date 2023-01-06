@@ -95,12 +95,12 @@ function Header() {
                 {/* Icons */}
                 <div className='flex items-center justify-end space-x-4'>
 
-                    <div className='relative flex justify-center items-center h-12 w-12 transition-all rounded-full duration-300 hover:bg-white hover:text-black'
+                    <div className='relative hidden md:inline-flex flex justify-center items-center h-12 w-12 transition-all rounded-full duration-300 hover:bg-white hover:text-black'
                     >
                         <SearchIcon className='navBtn cursor-pointer'/>
                     </div>
 
-                    <div className='relative flex justify-center items-center h-12 w-12 transition-all rounded-full duration-300 hover:bg-white hover:text-black'
+                    <div className='relative cursor-pointer flex justify-center items-center h-12 w-12 transition-all rounded-full duration-300 hover:bg-white hover:text-black'
                          onClick={() => dispatch(toggleAffinityModal())}
                     >
                         <ShoppingBagIcon className='navBtn'/>
@@ -112,7 +112,7 @@ function Header() {
 
                     </div>
 
-                    <button >Sign In</button>
+                    <button className='hidden md:inline-flex' >Sign In</button>
 
 
                     {/*Menu Component*/}

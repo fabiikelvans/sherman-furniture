@@ -1,0 +1,11 @@
+Model Information:
+* title:	Generic Modern Chair
+* source:	https://sketchfab.com/3d-models/generic-modern-chair-a3de0188b33d4994ab278c1a7e1a38e9
+* author:	¡Jacques (https://sketchfab.com/iJacques)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Generic Modern Chair" (https://sketchfab.com/3d-models/generic-modern-chair-a3de0188b33d4994ab278c1a7e1a38e9) by ¡Jacques (https://sketchfab.com/iJacques) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -81,7 +81,7 @@ export default function Home({ products, categories } : Props) {
         if (typeof window === "undefined" || !window.document) {
             return null;
         }
-    })
+    });
 
     return (
     <>
