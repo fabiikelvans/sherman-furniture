@@ -8,38 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Features() {
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    const t1 = gsap.timeline();
-
-    let scrollRef = useRef(null);
-
-    useIsomorphicLayoutEffect(() => {
-        let ctx = gsap.context(() => {
-            t1.fromTo('.box', {
-                scrollTrigger: {
-                    trigger: '.box',
-                    start: "top center",
-                    end: "bottom bottom",
-                    scrub: 1,
-                    markers: true
-                },
-                opacity: 0,
-                duration: 1.4,
-
-            }, {
-                opacity: 1,
-                duration: 2,
-            });
-        }, scrollRef); // <- scopes all selector text to the root element
-
-        return () => ctx.revert();
-    }, );
-
 
     return (
-        <div ref={scrollRef} className='spacing relative flex flex-col gap-8 md:flex-row items-center md:justify-between'>
-            <div className='relative box'>
+        <div className='spacing relative flex flex-col gap-8 md:flex-row items-center md:justify-between'>
+            <div className='relative'>
 
                 <Image src='https://images.unsplash.com/photo-1585128719715-46776b56a0d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxhbXB8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'
                        alt={'lamp'}

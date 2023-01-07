@@ -84,8 +84,7 @@ function Header() {
             <div className='flex  pt-4 items-center justify-between max-w-6xl mx-5 lg:mx-auto'>
 
                 {/* Logo */}
-                <Link href={''}
-                      onClick={() => router.push('/')}
+                <Link href={'/'}
                 >
                 <div className='h-24 w-32 relative cursor-pointer'>
                     <Image priority src="/logo/logo-white.png" alt='logo' layout='fill' objectFit='contain'/>

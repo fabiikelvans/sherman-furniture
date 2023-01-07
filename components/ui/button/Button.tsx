@@ -64,7 +64,7 @@ function Button({ title, bordered, icon, loading, onClick } : Props) {
         <div className='button-wrapper'>
         <button
         className={`btn-main flex items-center space-x-2 border-2 text-white hover:text-white 
-        border-green-500 hover:border-green-600 py-4 px-6 rounded-full ${bordered && ''}`}
+        border-green-500 hover:border-green-600 py-4 px-6 rounded-full ${bordered && 'bg-transparent border-2 border-white'}`}
         onClick={onClick}
         >
             <span className="icon">{icon}</span>

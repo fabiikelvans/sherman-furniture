@@ -158,7 +158,7 @@ function Product({product} : Props ) {
                         </div>
 
 
-                        <div className='my-12 py-6 px-[10%] rounded-xl bg-red-500 flex items-center justify-between'>
+                        <div className='my-12 py-6 px-[10%] rounded-xl bg-[#243026] flex items-center justify-between'>
                             <div onClick={
                                 (ev) => {
                                     ev.stopPropagation();

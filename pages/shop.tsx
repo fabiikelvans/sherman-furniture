@@ -35,7 +35,7 @@ function Shop({ products, categories } : Props) {
                 </div>
             </div>
 
-            <div className="products spacing grid grid-rows-1 gap-x-8 gap-y-12 grid-flow-row md:grid-flow-col">
+            <div className="products spacing grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
                 {
                     products.map((product: Product) => (
                         <div key={product._id}>

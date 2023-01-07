@@ -14,32 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 export function Model(props) {
     const { nodes, materials } = useGLTF('/models/dining/scene.glb');
 
-    const { camera } = useThree()
-    const ref = useRef()
-
-    useEffect(() => {
-        // Initialize the ScrollTrigger plugin
-        ScrollTrigger.defaults({
-            toggleActions: 'restart pause reset'
-        })
-
-        const cameraPos = camera.position.clone().sub(ref.current.position)
-
-
-        // Create a timeline for the scroll-triggered animation
-        const tl = gsap.timeline();
-        tl.to(ref.current.position, 1, { y: 0, ease: Power2.easeInOut })
-
-        // Use the ScrollTrigger plugin to start the animation when the element is scrolled into view
-        ScrollTrigger.create({
-            trigger: ref.current,
-            start: '0% 0%',
-            end: '100% 100%',
-            animation: tl,
-            scrub: true,
-            markers: true,
-        })
-    }, [])
+    const ref = useRef();
 
     return (
         <group {...props} dispose={null} ref={ref}>

@@ -59,14 +59,12 @@ function Product({ product } : Props) {
     };
 
     return (
-       <div className='flex flex-col items-center text-center group'
+       <div className='flex flex-col items-center text-center md:group'
             onMouseEnter={onMouseEnterHandler}
             onMouseLeave={onMouseLeaveHandler}
        >
            <div className='relative bg-[#29312b] h-[300px] w-[300px] flex flex-col justify-center items-center rounded-2xl'
-
            >
-
                <Image src={urlFor(product.image[0]).url()}
                       alt={product.title}
                       height={200}
@@ -87,7 +85,12 @@ function Product({ product } : Props) {
            </div>
 
            <div className='my-6'>
-               <Link href={`/product/${product.slug.current}`}>
+               <Link
+                     href={{
+                         pathname: `/product/${product.slug.current}`,
+
+                     }}
+               >
                <h1 className='text-xl duration-150 hover:text-red-500' style={titan.style}>{product.title}</h1>
                </Link>
 
