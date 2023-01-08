@@ -31,12 +31,16 @@ function Collections() {
                     pinSpacing: false,
                     // @ts-ignore
                     snap: true
-                })
+                });
+
             })
+
         }, scrollRef); // <- scopes all selector text to the root element
 
         return () => ctx.revert();
     }, );
+
+
 
 
     return (

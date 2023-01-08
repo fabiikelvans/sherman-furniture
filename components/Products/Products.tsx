@@ -6,6 +6,9 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {Pagination} from "swiper";
 import {BsArrowLeftCircle, BsArrowRightCircle} from "react-icons/bs";
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useIsomorphicLayoutEffect} from "usehooks-ts";
 SwiperCore.use([Pagination]);
 
 
@@ -29,6 +32,37 @@ function Products({ products }: Props) {
         sliderRef.current.swiper.slideNext();
     }, []);
 
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const t1 = gsap.timeline();
+
+    let scrollRef = useRef(null);
+
+    useIsomorphicLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            t1.from('.line', {
+                scrollTrigger: {
+                    trigger: '.line',
+                    start: "top bottom",
+                    end: "bottom 400px",
+                    scrub: 1,
+                },
+                duration: 1.8,
+                y: 100,
+                opacity: 0,
+                ease: "power4.out",
+                delay: 0.1,
+                stagger: {
+                    amount: 0.6
+                }
+
+            });
+        }, scrollRef); // <- scopes all selector text to the root element
+
+        return () => ctx.revert();
+    }, );
+
     return (
         <div className='relative '>
             <div className="absolute top-[40%] w-full flex justify-between z-40 px-6 ">
@@ -37,7 +71,7 @@ function Products({ products }: Props) {
                     <BsArrowRightCircle  onClick={handleNext} className='h-8 w-8 cursor-pointer duration-200 hover:text-orange-600'/>
             </div>
 
-        <div className='spacing text-center'>
+        <div ref={scrollRef} className='spacing text-center'>
             <Swiper ref={sliderRef}
                     spaceBetween={50}
                     slidesPerView={1}
@@ -59,7 +93,7 @@ function Products({ products }: Props) {
             >
                 {
                     products.map((product: Product) => (
-                        <SwiperSlide key={product._id}>
+                        <SwiperSlide key={product._id} className='line'>
                             <Product
                                 product={product}
                             />

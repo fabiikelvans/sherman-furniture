@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Head} from "../seo/Head/Head";
 import Nav from "../components/Header/Nav/Nav";
 import CTA from "../components/CTA/CTA";
@@ -9,6 +9,9 @@ import {fetchCategories} from "../utils/fetchCategories";
 import {fetchProducts} from "../utils/fetchProducts";
 import { Nunito, Titan_One } from '@next/font/google'
 import Product from "../components/Products/Product";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {useIsomorphicLayoutEffect} from "usehooks-ts";
 
 const nunito = Nunito({ subsets: ['latin'] });
 export const titan = Titan_One({
@@ -22,6 +25,38 @@ interface Props {
 }
 
 function Shop({ products, categories } : Props) {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const t1 = gsap.timeline();
+
+    let scrollRef = useRef(null);
+
+    useIsomorphicLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            t1.from('.line', {
+                scrollTrigger: {
+                    trigger: '.line',
+                    start: "top bottom",
+                    end: "bottom 350px",
+                    scrub: 1,
+                },
+                duration: 1.8,
+                y: 100,
+                opacity: 0,
+                ease: "power4.out",
+                delay: 0.1,
+                stagger: {
+                    amount: 0.6
+                }
+
+            });
+        }, scrollRef); // <- scopes all selector text to the root element
+
+        return () => ctx.revert();
+    }, );
+
+
     return (
         <div>
             <Head title='Sherman Furniture - Shop' description='Modern furniture and design store'/>
@@ -35,14 +70,16 @@ function Shop({ products, categories } : Props) {
                 </div>
             </div>
 
-            <div className="products spacing grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-                {
-                    products.map((product: Product) => (
-                        <div key={product._id}>
-                            <Product product={product}/>
-                        </div>
-                    ))
-                }
+            <div ref={scrollRef}>
+                <div className="products spacing grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
+                    {
+                        products.map((product: Product) => (
+                            <div key={product._id} className='line'>
+                                <Product product={product}/>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
             <CTA/>

@@ -105,3 +105,35 @@ export const skewGallery = (elem1 : Props) => {
         },
     });
 }
+
+
+// Scroll Texts
+export const textScroll = (elem1 : Props) => {
+    //register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(elem1, { transformOrigin: "right center", force3D: true });
+
+    ScrollTrigger.create({
+        // @ts-ignore
+        trigger: elem1,
+        start: "top bottom",
+        end: "bottom 200px",
+        scrub: 1,
+        pin: '.ghost',
+        markers: true,
+        onUpdate: (self) => {
+            gsap.from(elem1, {
+                duration: 1.8,
+                y: 100,
+                opacity: 0,
+                ease: "power4.out",
+                delay: 0.1,
+                skewY: 5,
+                stagger: {
+                    amount: 0.4
+                }
+            });
+        },
+    });
+
+}
