@@ -11,6 +11,13 @@ function Vase(props) {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
 
+    // Play Sound on Hover
+    const audioRef = useRef(null);
+    const playSound = () => {
+        audioRef.current.volume = 0.6; // Volume range between 0 - 1 (0 - 100%)
+        audioRef.current.play();
+    }
+
     return (
         <group {...props} dispose={null}>
             <group position={[-2, -1.42, -3]} rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
@@ -20,8 +27,10 @@ function Vase(props) {
                             <Html style={{zIndex : -1}} scale={0.5} rotation={[-Math.PI / 2, 0, 0]} position={[0, 2.5, 0]}  center zIndexRange={[20, 0]} >
                                 <div className="flex flex-col items-center justify-center">
                                     <h1 className='text-emerald-600' style={titan.style}>Vase</h1>
-                                    <span onClick={() => dispatch(toggleVaseModal())}
-                                        className="pulse-wrapper cursor-pointer duration-300 transition-all hover:bg-gray-800 hover:h-6 hover:w-6"><span className="badge-pulse hover:h-6 hover:w-6 animate-ping"></span></span>
+                                    <span onClick={() => dispatch(toggleVaseModal())} onMouseEnter={playSound}
+                                        className="pulse-wrapper cursor-pointer duration-300 transition-all hover:bg-gray-800 hover:h-6 hover:w-6"><span className="badge-pulse hover:h-6 hover:w-6 animate-ping">
+                                        <audio src="/audio/wave.wav" ref={audioRef} />
+                                    </span></span>
                                 </div>
                             </Html>
                         </mesh>

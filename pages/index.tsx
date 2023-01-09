@@ -25,6 +25,7 @@ import Cursor from "../components/ui/cursor/Cursor";
 import Categories from "../components/Categories/Categories";
 import Hover from "../components/Hover/Hover";
 import Marquee from "../components/Marquee/Marquee";
+import AudioViz from "../components/Audio/AudioViz";
 
 const nunito = Nunito({ subsets: ['latin'] });
 export const titan = Titan_One({

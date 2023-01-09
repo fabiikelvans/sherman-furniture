@@ -296,3 +296,29 @@
     pointer-events: none;
     background: url('../public/images/noise.gif');
 }
+
+
+/*
+**************************************
+    AUDIO PLAYER
+    ********************************
+*/
+
+.audioviz {
+    background: #F37116;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.audioviz--line {
+    height: 10px;
+    width: 1px;
+    background: white;
+}
