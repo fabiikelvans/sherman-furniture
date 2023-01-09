@@ -6,7 +6,7 @@ import {titan} from "../../pages";
 interface Props {
     name: string;
     image: string;
-    link(): string;
+    link: any;
 }
 
 

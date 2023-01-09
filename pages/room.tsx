@@ -16,7 +16,9 @@ function Room() {
     // Play Sound on Hover
     const audioRef = useRef(null);
     const playSound = () => {
+        {/*@ts-ignore*/}
         audioRef.current.volume = 0.6; // Volume range between 0 - 1 (0 - 100%)
+        {/*@ts-ignore*/}
         audioRef.current.play();
     }
 return (

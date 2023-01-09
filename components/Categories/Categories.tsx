@@ -49,6 +49,10 @@ function Categories({ categories, products } : Props) {
         return () => ctx.revert();
     }, );
 
+    // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
     return (
         <div ref={scrollRef} className='spacing'>
             <div  className='flex line justify-between flex-col md:flex-row items-center gap-8'>

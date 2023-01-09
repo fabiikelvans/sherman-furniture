@@ -39,7 +39,7 @@ function Product({ product } : Props) {
     const twitterRef = useRef();
     const twitterTween = useRef();
 
-    useEffect(() => {
+    useEffect(() => {{/*@ts-ignore*/}
         twitterTween.current = gsap.fromTo(twitterRef.current, {
             duration: 0.5,
             opacity: 0
@@ -51,10 +51,10 @@ function Product({ product } : Props) {
         });
     }, []);
 
-    const onMouseEnterHandler = () => {
+    const onMouseEnterHandler = () => {{/*@ts-ignore*/}
         twitterTween.current.play();
     };
-    const onMouseLeaveHandler = () => {
+    const onMouseLeaveHandler = () => {{/*@ts-ignore*/}
         twitterTween.current.reverse();
     };
 
@@ -71,14 +71,15 @@ function Product({ product } : Props) {
                       width={200}
                       className=''
                />
-               <button
+               {/*@ts-ignore*/}
+               <button  ref={twitterRef}
                    onClick={
                        (ev) => {
                            ev.stopPropagation();
                            toggleBasketModal();
                            addItemToBasket();
                        }}
-                   ref={twitterRef}
+
                    className='absolute button--calypso bottom-0 bg-red-500 px-4 py-2 rounded-full hover:bg-emerald-700'>
                    <span> Add to Cart </span>
                </button>

@@ -6,6 +6,7 @@ import Confetti from 'react-confetti'
 import useWindowSize from 'react-use/lib/useWindowSize'
 import {GetServerSideProps} from "next";
 import {fetchLineItems} from "../utils/fetchLineItems";
+//@ts-ignore
 import Currency from "react-currency-formatter";
 import Button from "../components/ui/button/Button";
 import Image from "next/image";
@@ -27,6 +28,7 @@ function Success({ products }: Props) {
     const { session_id } = router.query;
     const [mounted, setMounted] = useState(false);
     const [showOrderSummary, setShowOrderSummary] = useState(false);
+    // @ts-ignore
     const subtotal = products.reduce(
         (acc, product) => acc + product.price.unit_amount / 100,
         0

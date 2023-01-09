@@ -101,7 +101,7 @@ export default LampModal;
 
 function Model(props: JSX.IntrinsicElements['group']) {
 
-    const { nodes, materials } = useGLTF<GLTFResult>('/models/lamp/scene.glb');
+    const { nodes, materials } = useGLTF('/models/lamp/scene.glb');
 
     // Show Modal
     const [isOpen, setIsOpen] = useState(false);
@@ -109,7 +109,7 @@ function Model(props: JSX.IntrinsicElements['group']) {
 
     return (
         <group {...props} dispose={null} scale={0.075} position={[0,-1.5,0]}>
-            <group rotation={[-Math.PI / 2, 0, 0]}>
+            <group rotation={[-Math.PI / 2, 0, 0]}>{/*@ts-ignore*/}
                 <mesh castShadow receiveShadow geometry={nodes.Object_3.geometry} material={materials.material_0} position={[-13.73, -13.73, -0.65]} >
                 </mesh>
             </group>

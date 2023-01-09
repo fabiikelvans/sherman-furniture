@@ -123,6 +123,7 @@ function Product({product} : Props ) {
         })
     }
 
+    // @ts-ignore
     return(
     <div>
         <Head title={`Sherman Furniture - ${product.title}`} description={product.title}/>
@@ -151,9 +152,8 @@ function Product({product} : Props ) {
                         </div>
                         <h1 className='container text-4xl font-bold my-6' style={titan.style}>{product.title}</h1>
 
-                        <div className='text-sm font-light leading-7'>
-                            <PortableText
-                                value={product.description}
+                        <div className='text-sm font-light leading-7'>{/*@ts-ignore*/}
+                            <PortableText value={product.description}
                             />
                         </div>
 

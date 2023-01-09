@@ -103,7 +103,7 @@ export default LampModal;
 
 function Model(props: JSX.IntrinsicElements['group']) {
 
-    const { nodes, materials } = useGLTF<GLTFResult>('/models/carpet/scene.glb');
+    const { nodes, materials } = useGLTF('/models/carpet/scene.glb');
 
     // Show Modal
     const [isOpen, setIsOpen] = useState(false);
@@ -111,14 +111,14 @@ function Model(props: JSX.IntrinsicElements['group']) {
 
     return (
         <group {...props} dispose={null} position={[0, -0.21, -0.2]} scale={0.8} rotation={[1,0,1]}>
-            <group position={[-2.02, 0, 0]} >
+            <group position={[-2.02, 0, 0]} >{/*@ts-ignore*/}
                 <mesh geometry={nodes.Object_6.geometry} material={materials['VELVET-GREEN__Budapest']} >
 
-                </mesh>
-                <mesh geometry={nodes.Object_7.geometry} material={materials['VELVET-GREEN__Budapest']} />
+                </mesh>{/*@ts-ignore*/}
+                <mesh geometry={nodes.Object_7.geometry} material={materials['VELVET-GREEN__Budapest']} />{/*@ts-ignore*/}
                 <mesh geometry={nodes.Object_8.geometry} material={materials['VELVET-GREEN__Budapest']} >
                 </mesh>
-            </group>
+            </group>{/*@ts-ignore*/}
             <mesh geometry={nodes.Object_4.geometry} material={materials.carpet} />
         </group>
     )

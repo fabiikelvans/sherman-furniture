@@ -14,12 +14,14 @@ import VaseModal from "../components/Modal/VaseModal";
 import CarpetModal from "../components/Modal/CarpetModal";
 
 import dynamic from 'next/dynamic'
+{/*@ts-ignore*/}
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
     ssr: false
 });
 
 
 import Router from 'next/router';
+{/*@ts-ignore*/}
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
 Router.events.on('routeChangeStart', () => NProgress.start()); Router.events.on('routeChangeComplete', () => NProgress.done()); Router.events.on('routeChangeError', () => NProgress.done());
@@ -40,11 +42,12 @@ export default function App({ Component, pageProps }: AppProps) {
         })
 
 //get scroll value
+        {/*@ts-ignore*/}
         lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
             console.log({ scroll, limit, velocity, direction, progress })
         })
 
-        function raf(time) {
+        function raf(time:any) {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
@@ -56,8 +59,8 @@ export default function App({ Component, pageProps }: AppProps) {
           <Provider store={store}>
               <Toaster />
               <div className='text-white wrapper noise'>
-                  <AnimatedCursor
-                      innerSize={8}
+                  {/*@ts-ignore*/}
+                  <AnimatedCursor innerSize={8}
                       outerSize={8}
                       color='255, 255, 255'
                       outerAlpha={0.2}

@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
 
 function Lamp(props: JSX.IntrinsicElements['group']) {
 
-    const { nodes, materials } = useGLTF<GLTFResult>('/models/lamp/scene.glb');
+    const { nodes, materials } = useGLTF('/models/lamp/scene.glb');
 
     // Show Modal
     const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +23,16 @@ function Lamp(props: JSX.IntrinsicElements['group']) {
 
     // Play Sound on Hover
     const audioRef = useRef(null);
-    const playSound = () => {
+    const playSound = () => {{/*@ts-ignore*/}
         audioRef.current.volume = 0.6; // Volume range between 0 - 1 (0 - 100%)
+        {/*@ts-ignore*/}
         audioRef.current.play();
     }
 
     return (
         <group {...props} dispose={null} scale={0.018} position={[0.82, -0.70, -0.45]}>
             <group rotation={[-Math.PI / 2, 0, 0]}>
+                {/*@ts-ignore*/}
                 <mesh castShadow receiveShadow geometry={nodes.Object_3.geometry} material={materials.material_0} position={[-13.73, -13.73, -0.65]} >
                     <Html style={{zIndex : -1}} scale={0.5} rotation={[-Math.PI / 2, 0, 0]} position={[10, 20, 40]}  center zIndexRange={[20, 0]}  >
                         <div className="flex flex-col items-center justify-center" >

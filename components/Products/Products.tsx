@@ -71,7 +71,7 @@ function Products({ products }: Props) {
                     <BsArrowRightCircle  onClick={handleNext} className='h-8 w-8 cursor-pointer duration-200 hover:text-orange-600'/>
             </div>
 
-        <div ref={scrollRef} className='spacing text-center'>
+        <div ref={scrollRef} className='spacing text-center'>{/*@ts-ignore*/}
             <Swiper ref={sliderRef}
                     spaceBetween={50}
                     slidesPerView={1}

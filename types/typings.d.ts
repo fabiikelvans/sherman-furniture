@@ -1,4 +1,5 @@
 interface Category {
+    products: any;
     _id: string;
     _createdAt: string;
     _updatedAt: string;

@@ -7,7 +7,7 @@ const useMousePosition = () => {
         mouseY: null
     });
 
-    const updateMousePosition = (ev) => {
+    const updateMousePosition = (ev : any) => {
         setMousePosition({ mouseX: ev.clientX, mouseY: ev.clientY });
     };
 

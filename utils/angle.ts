@@ -1,1 +1,1 @@
-export const angleToRadians = (angleInDeg) => (Math.PI / 100) * angleInDeg;
+export const angleToRadians = (angleInDeg : any) => (Math.PI / 100) * angleInDeg;

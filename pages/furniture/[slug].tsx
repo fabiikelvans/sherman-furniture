@@ -2,25 +2,10 @@ import React, {useEffect, useRef} from 'react';
 import Nav from "../../components/Header/Nav/Nav";
 import {sanityClient, urlFor} from "../../sanity";
 import {GetStaticPaths, GetStaticProps} from "next";
-import {CiShoppingCart} from "react-icons/ci";
-import {useDispatch} from "react-redux";
-import {toggleAffinityModal} from "../../redux/features/modalSlice";
-import {addToBasket} from "../../redux/features/basketSlice";
-import toast from "react-hot-toast";
-import Image from "next/image";
-import {BsStars} from "react-icons/bs";
 import CTA from "../../components/CTA/CTA";
 import {Head} from "../../seo/Head/Head";
-import {gsap} from "gsap";
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-
-import {PortableText} from '@portabletext/react'
 import {titan} from "../index";
-import {MdVerifiedUser} from "react-icons/md";
-import Button from "../../components/ui/button/Button";
-import Modal from "../../components/Modal/Modal";
-import {groq} from "next-sanity";
 import {fetchProducts} from "../../utils/fetchProducts";
 import Product from "../../components/Products/Product";
 
@@ -30,7 +15,7 @@ interface Props {
     products: Product[];
 }
 
-function Furnitures({ products, category } : Props ) {
+function FurniturePage({ products, category } : Props ) {
 
 
     return(
@@ -126,4 +111,4 @@ _id,
     }
 }
 
-export default Furnitures
+export default FurniturePage

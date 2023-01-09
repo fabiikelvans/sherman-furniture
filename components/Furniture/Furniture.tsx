@@ -12,14 +12,23 @@ import Vase from "../Room/Vase";
 import Chair from "../Chair";
 import Sofa from "../Sofa";
 import CoffeeTable from "../CoffeeTable";
+import {GLTF} from "three/examples/jsm/loaders/GLTFLoader";
 
-function Model(props) {
-    const { nodes, materials } = useGLTF('/models/generic/scene.glb')
+
+type GLTFResult = GLTF & {
+    nodes: { robot: THREE.Mesh; rocket: THREE.Mesh }
+    materials: { metal: THREE.MeshStandardMaterial; wood: THREE.MeshStandardMaterial }
+}
+
+function Model(props: JSX.IntrinsicElements['group']) {
+    // @ts-ignore
+    const { nodes, materials } = useGLTF<GLTFResult>('/models/generic/scene.glb')
     return (
         <group {...props} dispose={null}>
             <group rotation={[-Math.PI / 2, 0, 0]} scale={0.38} position={[0, -0.72, 0 ]}>
-                <mesh geometry={nodes['Chair-2_Fabric_0'].geometry} material={materials.Fabric} />
-                <mesh geometry={nodes['Chair-2_Plastic_0'].geometry} material={materials.Plastic} />
+                {/*@ts-ignore*/}
+                <mesh geometry={nodes['Chair-2_Fabric_0'].geometry} material={materials.Fabric} />{/*@ts-ignore*/}
+                <mesh geometry={nodes['Chair-2_Plastic_0'].geometry} material={materials.Plastic} />{/*@ts-ignore*/}
                 <mesh geometry={nodes['Chair-2_Wood_0'].geometry} material={materials.Wood} />
             </group>
         </group>
@@ -30,15 +39,16 @@ function Model(props) {
 
 
 
-function Furniture(props) {
+function Furniture() {
 
     const orbitControlsRef = useRef(null);
 
     useFrame((state) => {
         if(!!orbitControlsRef.current){
             const { x, y } = state.mouse;
-            orbitControlsRef.current.setAzimuthalAngle(-x * angleToRadians(5));
-            orbitControlsRef.current.setPolarAngle((y + 5.5) * angleToRadians(5));
+            {/*@ts-ignore*/}
+            orbitControlsRef.current.setAzimuthalAngle(-x * angleToRadians(5));{/*@ts-ignore*/}
+            orbitControlsRef.current.setPolarAngle((y + 5.5) * angleToRadians(5));{/*@ts-ignore*/}
             orbitControlsRef.current.update();
         }
     });

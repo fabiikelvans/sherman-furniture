@@ -16,7 +16,7 @@ function Button({ title, bordered, icon, loading, onClick } : Props) {
 
     const [cursorPos, setCursorPos] = React.useState({ x: 0, y: 0 });
 
-    const mouseListener = (e) => {
+    const mouseListener = (e:any) => {
         setCursorPos({
             x: e.clientX - 10,
             y: e.clientY - 10
@@ -47,13 +47,13 @@ function Button({ title, bordered, icon, loading, onClick } : Props) {
     React.useEffect(() => {
         let button = document.querySelector(".button-wrapper");
 
-        window.addEventListener("mousemove", mouseListener);
-        button.addEventListener("mouseenter", scaleCursorIn);
+        window.addEventListener("mousemove", mouseListener);{/*@ts-ignore*/}
+        button.addEventListener("mouseenter", scaleCursorIn);{/*@ts-ignore*/}
         button.addEventListener("mouseleave", scaleCursorOut);
 
         return () => {
-            window.removeEventListener("mousemove", mouseListener);
-            button.removeEventListener("mouseenter", scaleCursorIn);
+            window.removeEventListener("mousemove", mouseListener);{/*@ts-ignore*/}
+            button.removeEventListener("mouseenter", scaleCursorIn);{/*@ts-ignore*/}
             button.removeEventListener("mouseleave", scaleCursorOut);
         };
     }, []);

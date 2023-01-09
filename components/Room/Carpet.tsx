@@ -12,7 +12,7 @@ type GLTFResult = GLTF & {
 }
 
 function Carpet(props: JSX.IntrinsicElements['group']) {
-    const { nodes, materials } = useGLTF<GLTFResult>('/models/carpet/scene.glb');
+    const { nodes, materials } = useGLTF('/models/carpet/scene.glb');
 
     // Show Modal
     const [isOpen, setIsOpen] = useState(false);
@@ -20,18 +20,19 @@ function Carpet(props: JSX.IntrinsicElements['group']) {
 
     // Play Sound on Hover
     const audioRef = useRef(null);
-    const playSound = () => {
+    const playSound = () => {{/*@ts-ignore*/}
         audioRef.current.volume = 0.6; // Volume range between 0 - 1 (0 - 100%)
+        {/*@ts-ignore*/}
         audioRef.current.play();
     }
 
     return (
         <group {...props} dispose={null} position={[0, -1.41, -0.2]} scale={1.06}>
-            <group position={[-2.02, 0, 0]}>
+            <group position={[-2.02, 0, 0]}>{/*@ts-ignore*/}
                 <mesh geometry={nodes.Object_6.geometry} material={materials['VELVET-GREEN__Budapest']} >
 
-                </mesh>
-                <mesh geometry={nodes.Object_7.geometry} material={materials['VELVET-GREEN__Budapest']} />
+                </mesh>{/*@ts-ignore*/}
+                <mesh geometry={nodes.Object_7.geometry} material={materials['VELVET-GREEN__Budapest']} />{/*@ts-ignore*/}
                 <mesh geometry={nodes.Object_8.geometry} material={materials['VELVET-GREEN__Budapest']} >
                     <Html scale={0.5} rotation={[-Math.PI / 2, -0.05, 0.08]} position={[0.3, 0, 0]} zIndexRange={[20, 0]} >
                         <div className="flex flex-col items-center justify-center">
@@ -45,7 +46,7 @@ function Carpet(props: JSX.IntrinsicElements['group']) {
                         </div>
                     </Html>
                 </mesh>
-            </group>
+            </group>{/*@ts-ignore*/}
             <mesh geometry={nodes.Object_4.geometry} material={materials.carpet} />
         </group>
     )

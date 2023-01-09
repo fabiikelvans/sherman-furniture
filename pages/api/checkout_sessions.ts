@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import { urlFor } from "../../sanity";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     // https://github.com/stripe/stripe-node#configuration
+    //@ts-ignore
     apiVersion: "2022-08-01",
 });
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-    const updateMousePosition = (ev) => {
+    const updateMousePosition = (ev: any) => {
         setMousePosition({ x: ev.clientX, y: ev.clientY });
     };
 
@@ -43,6 +43,7 @@ function Hover() {
 
     const [showImg, setShowImg] = useState(false);
     let imageAnimation = '';
+    {/*@ts-ignore*/}
      if (showImg) imageAnimation = <img
          src='https://images.unsplash.com/photo-1617104235043-44d7e019e442?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80'
          alt={'hello'}
@@ -58,7 +59,7 @@ function Hover() {
 
 
     useEffect(() => {
-        const handleMouseMove = (event) => {
+        const handleMouseMove = (event : any) => {
             setX(event.clientX);
             setY(event.clientY);
         };

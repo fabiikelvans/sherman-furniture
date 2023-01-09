@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 // Reusable component that also takes dependencies
-export default (cb, deps) => {
+export default (cb: any, deps : any) => {
     if (typeof performance === "undefined" || typeof window === "undefined") {
         return;
     }
@@ -19,11 +19,14 @@ export default (cb, deps) => {
         // In seconds ~> you can do ms or anything in userland
         cb({ time, delta });
         last.current = now;
+        //@ts-ignore
         frame.current = requestAnimationFrame(animate);
     };
 
     useEffect(() => {
-        frame.current = requestAnimationFrame(animate);
+        //@ts-ignore
+        frame.current = requestAnimationFrame(animate);        //@ts-ignore
+
         return () => cancelAnimationFrame(frame.current);
     }, deps); // Make sure to change it if the deps change
 };

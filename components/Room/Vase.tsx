@@ -4,7 +4,7 @@ import {titan} from "../../pages";
 import {toggleLampModal, toggleVaseModal} from "../../redux/features/modalSlice";
 import {useDispatch} from "react-redux";
 
-function Vase(props) {
+function Vase(props : any) {
     const { nodes, materials } = useGLTF('/models/vase/scene.glb');
 
     // Show Modal
@@ -14,7 +14,9 @@ function Vase(props) {
     // Play Sound on Hover
     const audioRef = useRef(null);
     const playSound = () => {
+        {/*@ts-ignore*/}
         audioRef.current.volume = 0.6; // Volume range between 0 - 1 (0 - 100%)
+        {/*@ts-ignore*/}
         audioRef.current.play();
     }
 
@@ -22,7 +24,7 @@ function Vase(props) {
         <group {...props} dispose={null}>
             <group position={[-2, -1.42, -3]} rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
                 <group rotation={[-Math.PI, 0, 0]}>
-                    <group rotation={[Math.PI / 2, Math.PI / 2, 0]} scale={0.35}>
+                    <group rotation={[Math.PI / 2, Math.PI / 2, 0]} scale={0.35}>{/*@ts-ignore*/}
                         <mesh geometry={nodes.Vase_White_0.geometry} material={materials.White} >
                             <Html style={{zIndex : -1}} scale={0.5} rotation={[-Math.PI / 2, 0, 0]} position={[0, 2.5, 0]}  center zIndexRange={[20, 0]} >
                                 <div className="flex flex-col items-center justify-center">
@@ -33,8 +35,8 @@ function Vase(props) {
                                     </span></span>
                                 </div>
                             </Html>
-                        </mesh>
-                        <mesh geometry={nodes.Vase_Gold_0.geometry} material={materials.Gold} />
+                        </mesh>{/*@ts-ignore*/}
+                        <mesh geometry={nodes.Vase_Gold_0.geometry} material={materials.Gold} />{/*@ts-ignore*/}
                         <mesh geometry={nodes.Vase_Gold_0_1.geometry} material={materials.Gold} />
                     </group>
                 </group>

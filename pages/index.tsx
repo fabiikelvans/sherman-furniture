@@ -1,6 +1,5 @@
 import {Head} from "../seo/Head/Head";
 import { Nunito, Titan_One } from '@next/font/google'
-import Canvas from '../components/Canvas'
 import Button from "../components/ui/button/Button";
 import Furniture from "../components/Furniture/Furniture";
 import MainCanvas from "../components/Canvas/MainCanvas";

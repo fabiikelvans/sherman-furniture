@@ -99,7 +99,7 @@ export default LampModal;
 
 function Model(props: JSX.IntrinsicElements['group']) {
 
-    const { nodes, materials } = useGLTF<GLTFResult>('/models/vase/scene.glb');
+    const { nodes, materials } = useGLTF('/models/vase/scene.glb');
 
     // Show Modal
     const [isOpen, setIsOpen] = useState(false);
@@ -109,10 +109,9 @@ function Model(props: JSX.IntrinsicElements['group']) {
         <group {...props} dispose={null} scale={2.6}>
             <group position={[0, -0.56, 0]} rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
                 <group rotation={[-Math.PI, 0, 0]}>
-                    <group rotation={[Math.PI / 2, Math.PI / 2, 0]} scale={0.35}>
-                        <mesh geometry={nodes.Vase_White_0.geometry} material={materials.White} >
-                        </mesh>
-                        <mesh geometry={nodes.Vase_Gold_0.geometry} material={materials.Gold} />
+                    <group rotation={[Math.PI / 2, Math.PI / 2, 0]} scale={0.35}>{/*@ts-ignore*/}
+                        <mesh geometry={nodes.Vase_White_0.geometry} material={materials.White} ></mesh>{/*@ts-ignore*/}
+                        <mesh geometry={nodes.Vase_Gold_0.geometry} material={materials.Gold} />{/*@ts-ignore*/}
                         <mesh geometry={nodes.Vase_Gold_0_1.geometry} material={materials.Gold} />
                     </group>
                 </group>
