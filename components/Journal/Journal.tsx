@@ -43,7 +43,7 @@ function Journal() {
             <div className='spacing flex flex-col md:flex-row mb-32 md:mb-0 justify-between gap-y-12'>
                 <div className='w-[100%] md:w-[50%] text-center'>
                     <h1 className='text-6xl font-bold line' style={titan.style}>Journal</h1>
-                    <p className='mt-10 px-12 text-sm font-semibold line'>The Journal is a space where we post our thoughts on trends, collaborations with other designers, stuff we love at the moment, and news. Not to mention Red events that can't be missed!</p>
+                    <p className='mt-10 px-12 text-sm font-semibold line'>The Journal is a space where we post our thoughts on trends, collaborations with other designers, stuff we love at the moment, and news. Not to mention Red events that cannot be missed!</p>
                     <div className="line">
                         <Link href='/about' className='mt-12 underline tracking-wide'>Discover</Link>
                     </div>

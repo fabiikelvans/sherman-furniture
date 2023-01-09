@@ -46,6 +46,7 @@ function Testimonials() {
             </div>
 
             <div className='w-full md:w-[400px] rounded-2xl bg-orange-200 text-[#121B14] py-8 px-10 line'>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <div className='text-4xl opacity-40' style={titan.style}>"</div>
                 <p className='italic'>
                     Their products are amazing! This is the best place to buy any furnitures with super fantastic quality and design.
