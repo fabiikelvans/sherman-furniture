@@ -18,7 +18,11 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
+    try{
     const products: Product[] = await sanityClient.fetch(query);
     res.status(200).json({ products });
+    } catch(err) {
+        console.log("err: ", err)
+    }
 
 }
